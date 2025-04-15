@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧠 Full Stack AI Career Coach
 
-## Getting Started
+An AI-powered career coaching web application built with **Next.js**. It helps users gain personalized career insights, prepare for interviews, and improve their resumes using the power of **Gemini AI**. Packed with modern tools and a seamless user experience.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- ✨ **AI Insights Generator**  
+  Uses **Gemini AI** to provide personalized career advice based on the user's skills and industry.
+
+- 🔐 **Authentication**  
+  User authentication handled securely via **Clerk**.
+
+- 📥 **Resume Builder & Enhancer**  
+  Users can build resumes from scratch or upload existing ones to get AI-generated suggestions and download the final version as a PDF.
+
+- 🧠 **Interview Prep**  
+  Automatically generates **AI-based quizzes** to help users prepare for interviews based on their job domain.
+
+- 📊 **Insight & Feedback System**  
+  Feedback and improvement tips tailored to the user’s inputs and goals.
+
+- ⚙️ **Background Function Execution**  
+  Integrated **Inngest** for auto-invoking serverless functions like quiz generation and analytics tracking.
+
+- 🗃️ **Database**  
+  Uses **Neon DB** (PostgreSQL serverless) to store user data, quizzes, insights, and resume info.
+
+- 🎨 **UI & Styling**  
+  Built with **Tailwind CSS** and **Shadcn UI** for a clean, modern, and responsive UI.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology       | Usage                                      |
+|------------------|--------------------------------------------|
+| **Next.js**       | React framework for SSR/SSG and routing    |
+| **Tailwind CSS**  | Styling                                    |
+| **Shadcn UI**     | Component library                          |
+| **Gemini AI API** | AI-based logic and responses               |
+| **Prisma**        | ORM for Neon DB                            |
+| **Neon DB**       | Serverless PostgreSQL DB                   |
+| **Clerk**         | Authentication & User Management           |
+| **Inngest**       | Background jobs / Function scheduling      |
+
+---
+
+## 📦 Installation
+
+Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/ai-career-coach.git
+cd ai-career-coach
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 🔐 Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/onboarding
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 🗃️ Database (Neon DB)
+DATABASE_URL=postgresql://<username>:<password>@<host>/<database>?sslmode=require
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 🤖 Gemini AI API Key
+GEMINI_API_KEY=your_gemini_api_key
